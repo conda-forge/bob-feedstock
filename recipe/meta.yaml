@@ -96,6 +96,7 @@ test:
   requires:
     - nose
     - cmake
+    - pkg-config
 
 about:
   home: http://idiap.github.io/bob/
