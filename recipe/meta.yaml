@@ -91,7 +91,8 @@ test:
     - bob.test
 
   commands:
-    - nosetests -sv bob --exclude=test_cpp_interface
+    - nosetests -sv bob --exclude=test_cpp_interface  # [not osx]
+    - CFLAGS="${CFLAGS} -pthread" LDFLAGS="${LDFLAGS} -lpthread" DYLD_FALLBACK_LIBRARY_PATH=$PREFIX/lib nosetests -sv bob.extension --exclude=test_cpp_interface  # [osx]
 
   requires:
     - nose
