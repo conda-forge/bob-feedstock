@@ -91,7 +91,7 @@ test:
     - bob.test
 
   commands:
-    - nosetests -sv bob
+    - nosetests -sv bob --exclude=test_cpp_interface
 
   requires:
     - nose
