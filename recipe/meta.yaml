@@ -91,7 +91,7 @@ test:
     - bob.test
 
   commands:
-    - nosetests -sv bob --exclude=test_cflags_other --exclude=test_extensions
+    - nosetests -sv bob
 
   requires:
     - nose
