@@ -1,4 +1,4 @@
-{% set version = "2.2.0" %}
+{% set version = "2.3.4" %}
 
 package:
   name: bob
@@ -7,7 +7,7 @@ package:
 source:
   fn: bob-{{ version }}.zip
   url: https://pypi.io/packages/source/b/bob/bob-{{ version }}.zip
-  md5: b0119a365a0a79dda8bfdcba74f07e5f
+  md5: 1b9fdf0c02b412b99217ce557073ff4b
 
 build:
   number: 0
@@ -18,71 +18,71 @@ requirements:
   build:
     - python
     - setuptools
-    - bob.ap ==2.0.4
-    - bob.blitz ==2.0.8
-    - bob.core ==2.1.2
-    - bob.db.atnt ==2.0.3
+    - bob.extension ==2.2.1
+    - bob.blitz ==2.0.9
+    - bob.core ==2.1.3
+    - bob.io.base ==2.0.10
+    - bob.sp ==2.0.5
+    - bob.ap ==2.0.5
+    - bob.math ==2.0.4
+    - bob.measure ==2.1.2
     - bob.db.base ==2.0.6
-    - bob.db.iris ==2.0.4
-    - bob.db.mnist ==2.0.3
-    - bob.db.verification.utils ==2.0.7
-    - bob.db.wine ==2.0.3
-    - bob.extension ==2.0.11
-    - bob.io.audio ==2.0.0
-    - bob.io.base ==2.0.8
-    - bob.io.image ==2.0.6
-    - bob.io.matlab ==2.0.4
-    - bob.io.video ==2.0.6
-    - bob.ip.base ==2.0.9
-    - bob.ip.color ==2.0.4
-    - bob.ip.draw ==2.0.3
-    - bob.ip.facedetect ==2.0.7
+    - bob.io.audio ==2.0.1
+    - bob.io.image ==2.1.1
+    - bob.io.video ==2.0.10
+    - bob.io.matlab ==2.0.5
+    - bob.ip.base ==2.0.10
+    - bob.ip.color ==2.0.5
+    - bob.ip.draw ==2.0.4
     - bob.ip.gabor ==2.0.5
-    - bob.ip.optflow.hornschunck ==2.0.6
-    - bob.ip.optflow.liu ==2.0.5
-    - bob.learn.activation ==2.0.4
+    - bob.learn.activation ==2.0.5
+    - bob.learn.libsvm ==2.0.6
+    - bob.learn.linear ==2.0.8
+    - bob.learn.mlp ==2.1
+    - bob.learn.em ==2.0.9
     - bob.learn.boosting ==2.0.7
-    - bob.learn.em ==2.0.8
-    - bob.learn.libsvm ==2.0.3
-    - bob.learn.linear ==2.0.7
-    - bob.learn.mlp ==2.0.11
-    - bob.math ==2.0.3
-    - bob.measure ==2.1.1
-    - bob.sp ==2.0.4
+    - bob.db.verification.utils ==2.0.8
+    - bob.db.iris ==2.0.4
+    - bob.db.wine ==2.0.4
+    - bob.db.mnist ==2.0.4
+    - bob.db.atnt ==2.0.4
+    - bob.ip.facedetect ==2.0.8
+    - bob.ip.optflow.hornschunck ==2.0.7
+    - bob.ip.optflow.liu ==2.0.6
 
   run:
     - python
-    - bob.ap ==2.0.4
-    - bob.blitz ==2.0.8
-    - bob.core ==2.1.2
-    - bob.db.atnt ==2.0.3
+    - bob.extension ==2.2.1
+    - bob.blitz ==2.0.9
+    - bob.core ==2.1.3
+    - bob.io.base ==2.0.10
+    - bob.sp ==2.0.5
+    - bob.ap ==2.0.5
+    - bob.math ==2.0.4
+    - bob.measure ==2.1.2
     - bob.db.base ==2.0.6
-    - bob.db.iris ==2.0.4
-    - bob.db.mnist ==2.0.3
-    - bob.db.verification.utils ==2.0.7
-    - bob.db.wine ==2.0.3
-    - bob.extension ==2.0.11
-    - bob.io.audio ==2.0.0
-    - bob.io.base ==2.0.8
-    - bob.io.image ==2.0.6
-    - bob.io.matlab ==2.0.4
-    - bob.io.video ==2.0.6
-    - bob.ip.base ==2.0.9
-    - bob.ip.color ==2.0.4
-    - bob.ip.draw ==2.0.3
-    - bob.ip.facedetect ==2.0.7
+    - bob.io.audio ==2.0.1
+    - bob.io.image ==2.1.1
+    - bob.io.video ==2.0.10
+    - bob.io.matlab ==2.0.5
+    - bob.ip.base ==2.0.10
+    - bob.ip.color ==2.0.5
+    - bob.ip.draw ==2.0.4
     - bob.ip.gabor ==2.0.5
-    - bob.ip.optflow.hornschunck ==2.0.6
-    - bob.ip.optflow.liu ==2.0.5
-    - bob.learn.activation ==2.0.4
+    - bob.learn.activation ==2.0.5
+    - bob.learn.libsvm ==2.0.6
+    - bob.learn.linear ==2.0.8
+    - bob.learn.mlp ==2.1
+    - bob.learn.em ==2.0.9
     - bob.learn.boosting ==2.0.7
-    - bob.learn.em ==2.0.8
-    - bob.learn.libsvm ==2.0.3
-    - bob.learn.linear ==2.0.7
-    - bob.learn.mlp ==2.0.11
-    - bob.math ==2.0.3
-    - bob.measure ==2.1.1
-    - bob.sp ==2.0.4
+    - bob.db.verification.utils ==2.0.8
+    - bob.db.iris ==2.0.4
+    - bob.db.wine ==2.0.4
+    - bob.db.mnist ==2.0.4
+    - bob.db.atnt ==2.0.4
+    - bob.ip.facedetect ==2.0.8
+    - bob.ip.optflow.hornschunck ==2.0.7
+    - bob.ip.optflow.liu ==2.0.6
 
 test:
   imports:
@@ -91,12 +91,13 @@ test:
     - bob.test
 
   commands:
-    - nosetests -sv bob --exclude=test_cflags_other --exclude=test_extensions
+    - nosetests -sv bob --exclude=test_cpp_interface
 
   requires:
     - nose
     - cmake
     - pkg-config
+    - freetype
 
 about:
   home: http://idiap.github.io/bob/
