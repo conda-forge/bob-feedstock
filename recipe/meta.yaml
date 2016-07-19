@@ -97,6 +97,7 @@ test:
     - nose
     - cmake
     - pkg-config
+    - freetype
 
 about:
   home: http://idiap.github.io/bob/
