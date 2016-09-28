@@ -93,7 +93,7 @@ test:
     - bob.test
 
   commands:
-    - nosetests -sv bob  # [not osx]
+    - OPENBLAS_NUM_THREADS=1 nosetests -sv bob  # [not osx]
     - CFLAGS="${CFLAGS} -pthread" LDFLAGS="${LDFLAGS} -lpthread" DYLD_FALLBACK_LIBRARY_PATH=$PREFIX/lib nosetests -sv bob # [osx]
 
   requires:
