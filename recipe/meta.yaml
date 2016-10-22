@@ -7,7 +7,7 @@ package:
 source:
   fn: bob-{{ version }}.zip
   url: https://pypi.io/packages/source/b/bob/bob-{{ version }}.zip
-  md5: 7c36dacacaf41fed420d9f148752e855
+  md5: 997a1eeb86c524078ff3af504abb5754
 
 build:
   number: 0
@@ -92,7 +92,7 @@ test:
 
   commands:
     - OPENBLAS_NUM_THREADS=1 nosetests -sv bob  # [not osx]
-    - CFLAGS="${CFLAGS} -pthread" LDFLAGS="${LDFLAGS} -lpthread" DYLD_FALLBACK_LIBRARY_PATH=$PREFIX/lib nosetests -sv bob # [osx]
+    - CFLAGS="${CFLAGS} -pthread" LDFLAGS="${LDFLAGS} -lpthread" DYLD_FALLBACK_LIBRARY_PATH=$PREFIX/lib nosetests -sv bob  # [osx]
 
   requires:
     - nose
