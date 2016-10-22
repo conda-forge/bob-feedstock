@@ -18,7 +18,6 @@ requirements:
   build:
     - python
     - setuptools
-    - libpng 1.6.22|1.6.24  # [osx]
     - bob.extension ==2.3.3
     - bob.blitz ==2.0.11
     - bob.core ==2.1.6
